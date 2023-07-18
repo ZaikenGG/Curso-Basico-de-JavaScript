@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+:root {
+    --color-naranja: rgb(255, 106, 0);
+    --color-blaco: rgb(255, 255, 255);
+    --color-input: rgba(0, 0, 0, 0.063);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.descuento-main {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.descuento-container {
+    /* border: 1px solid black; */
+    position: relative;
+    width: 500px;
+    height: auto;
+    padding: 30px;
+    border-radius: 20px;
+
+    box-shadow: rgba(0, 0, 0, 0.065) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.descuento-container__title {
+    width: auto;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.descuento-container__title-heading {
+    padding: 20px 30px;
+    background-color: var(--color-naranja);
+    color: var(--color-blaco);
+    border-radius: 10px;
+    font-size: 2.5rem;
+
+    position: absolute;
+    top: -141px;
+}
+
+.descuento-container__label--precio {
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.descuento-container__input--precio {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 2.0rem;
+
+    margin-bottom: 3.5rem;
+    color: var(--color-naranja);
+    background-color: var(--color-input);
+    border-bottom: 4px solid var(--color-naranja);
+
+    transition: 0.5s;
+}
+
+.descuento-container__input--precio:hover {
+    outline: auto;
+    transform: scale(1.1);
+
+}
+
+.descuento-container__label--descuento {
+    font-size: 2.5rem;
+    font-weight: lighter;
+}
+
+.descuento-container__input--descuento {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 2.0rem;
+
+    margin-bottom: 3.5rem;
+    color: var(--color-naranja);
+    background-color: var(--color-input);
+    border-bottom: 4px solid var(--color-naranja);
+
+    transition: 0.5s;
+}
+
+.descuento-container__input--descuento:hover {
+    outline: auto;
+    transform: scale(1.1);
+}
+
+.descuento-container__button {
+    font-size: 2.5rem;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+
+    background-color: var(--color-naranja);
+    color: var(--color-blaco);
+    cursor: pointer;
+
+    transition: .5s;
+    animation: zoom-in-zoom-out 5s ease infinite;
+}
+
+.descuento-container__button:hover {
+    transform: scale(1.1);
+}
+
+/* mobile */
+@media (max-width: 575px) {
+    .descuento-container {
+        width: 450px;
+    }
+
+    @keyframes zoom-in-zoom-out {
+        50% {
+            transform: scale(1.1, 1.1);
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .descuento-container {
+        width: 350px;
+    }
+
+    @keyframes zoom-in-zoom-out {
+        50% {
+            transform: scale(1.1, 1.1);
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .descuento-container {
+        width: 290px;
+    }
+
+
+    .descuento-container__title-heading   {
+        top: -173px;
+    }
+
+    @keyframes zoom-in-zoom-out {
+        50% {
+            transform: scale(1.06, 1.06);
+        }
+    }
+
+}
